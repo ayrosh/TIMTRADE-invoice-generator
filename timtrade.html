@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400&display=swap" rel="stylesheet">
+    <title>INVOICE GENERATOR</title>
+    <script>
+        function printContent(el){
+            var restorepage = document.body.innerHTML;
+            var printcontent = document.getElementById(el).innerHTML;
+            document.body.innerHTML = printcontent;
+            window.print();
+            document.body.innerHTML = restorepage;
+        }
+    </script>
+</head>
+<body id="div1">
+    <div class="body" >
+        <img style="margin-left: 200px; margin-top: 10px;" src="logo.jpg" alt="logo.png">
+        <h1 style= "margin-left: 170px"> TIMTRADE</h1>
+        <label id="l1" for="name">Name:</label>
+        <input type="text" id="name"><br><br>
+        <label style="margin-left: 0px;" for="order">Order No:</label>
+        <input type="text" id="order">
+
+         <table>
+            <thead>
+                <div style="margin-top: 50px; margin-left: 3px;" >
+                    <th style="padding-left: 12px;">PRODUCT</th>
+                    <th>FEET/QTY</th>
+                    <th>TOTAL</th>
+                   
+                </div>    
+            </thead>
+
+            <tbody id="table-body">
+             <tr class="single-row">
+                <td><input type="text" placeholder="Product name" class="product left"></td>
+                  <td><input type="number" placeholder="ft/pcs" name="unit" class="unit" id="unit" onkeyup="getInput()"></td>
+                  <td><input style="font-weight:bolder; font-size: 15px;" type="number" placeholder="0" name="amount" class="amount" id="amount" disabled></td>
+                  <td style="text-align: right;"><span class="material-icons" style="cursor: pointer;">delete_outline</span></td> 
+             </tr>
+
+             <tr style="padding-left: 20px">
+                <td class="dashed "><div class="float">
+                    <a href="#" class="float" id="add-row">
+                        <span class="material-icons plus">add</span>
+                    </a>
+                </div>
+            </td>
+                <td class="dashed"></td>
+                <td class="dashed"></td>
+                <td class="dashed"></td>
+                <td class="dashed"></td>
+            </tr>
+        </tbody>
+        </table>
+       
+            </tbody>
+         </table>
+    </div>
+    <div id="buttons">
+        <button type="button" id="printbutton" onclick="printContent('div1')">Print</button>
+        <button type="reset" id="resetbutton" onclick="window.location.reload()">Reset</button>
+    </div>
+    <div id="others">
+        <h2 style="color: white;">OTHERS:</h2>
+        <ul style="margin-left: 20px; color:white;">
+            <li>Quadrant @20/=</li>
+            <li>Covermoulding / Archtreave @25/=</li>
+            <li>cornice 3x1 @35/=</li>
+             <li>T.N.G / cornice 4x1 @45/=</li>
+             <li>Skirtings</li>
+             <li>Section houses</li>
+             <li>Props @300/=</li>
+             <li>Back & Seats</li>
+        </ul>
+        <h2 style="margin-top: 20px; color: white;"> TISSUES:</h2>
+        <ul style="margin-left: 20px; color: white;">
+            <li>40 Pack tissue papers</li>
+            <li>Jumbo Rolls</li>
+            <li>10 Pack tissue papers</li>
+        </ul>
+    </div>
+     <div class="products">
+        <h1 id="anime" style="color: white; margin-left: 45%; text-decoration: underline;">Products...</h1>
+        <h2 style="color: white;">Timber:</h2>
+        <div class="timber">
+            <div id="STD">
+                <h3 style="margin-left: 10px; text-decoration: underline;">STD-PINE</h3>
+                <ul style="margin-left: 20px; text-decoration: none; color: white; font-size: large; list-style-type: none; margin-top: 10px;">
+                    <li>(2x1) @15/=</li>
+                    <li>(2x2) @24/=</li>
+                    <li>(3x2) @35/=</li>
+                    <li>(4x2) @46/=</li>
+                    <li>(6x1) @35/=</li>
+                    <li>(6x2) @70/=</li>
+                    <li>(8x1) @50/=</li>
+                    <li>(8x2) @100/=</li>
+                    <li>(10x1) @70/=</li>
+                </ul>
+            </div>
+            <div id="PINE">
+                <h3 style="margin-left: 10px; text-decoration: underline;">STD-CYPRESS</h3>
+                <ul style="margin-left: 20px; text-decoration: none; color: white; font-size: large; list-style-type: none; margin-top: 10px;">
+                    <li>(2x1) @18/=</li>
+                    <li>(2x2) @35/=</li>
+                    <li>(3x2) @45/=</li>
+                    <li>(4x2) @65/=</li>
+                    <li>(6x1) @45/=</li>
+                    <li>(6x2) @100/=</li>
+                    <li>(8x1) @80/=</li>
+                    <li>(8x2) @160/=</li>
+                    <li>(10x1) @100/=</li>
+                </ul>
+            </div>
+        </div>
+        <h2 style="margin-top: 10px; color: white;">DOORS:</h2>
+        <div DOORS>
+             <ul style="margin-left: 20px; font-size: large;">
+                <li>Embossed 5A doors @ 3000/=</li>
+                <li>Melamine Door @3000/=</li>
+                <li>Ordinary Flash Door(DF01) @ 2000/=</li>
+                <li>Batten Doors @1800/=</li>
+                <li>T Doors @4300/=</li>
+                <li>Joint Door @1400/=</li>
+                <li>4x2 Door Frames @ 1300 per set(pine)</li>
+                <li>4x2 Door Frames @ 1300 per set(cypress)</li>
+             </ul>
+        </div>  
+     </div>
+     <style>
+        * {
+    margin: 0;
+    padding: 0;
+ 
+  }
+  
+body {
+    font-family: roboto;
+    background: white;
+    margin-top: 10px;
+    display: flex;
+    margin-left: 20px;
+    overflow: hidden;
+    background-color: black;
+
+  }
+.invoice-header {
+    display: flex;
+    padding: 4px;
+    width: 40%;
+  }
+
+.body{
+    width: 450px;
+    height: 650px;
+    border: 2px solid black;
+    overflow: scroll;
+    margin-left: 20px;
+    padding: 10px;
+    background-color: white;
+    margin-right: 0px;
+}
+#name{
+    border-left: none;
+    border-right: none;
+    border-top:none;
+    border-bottom: dashed;
+    outline: none;
+    font-size: large;
+    font-weight: 600;
+    margin-left: 0px;
+    min-width: 200px ;
+}
+
+#order{
+    border-left: none;
+    border-right: none;
+    border-top:none;
+    border-bottom: dashed;
+    outline: none;
+    width: 50px;
+    font-size: large;
+    font-weight: 600;
+    margin-left: 0px;
+    min-width: 100px;
+    
+}
+
+input[type=text]{
+    max-width: 100px;
+    text-align: left;
+    font-size: 15px;
+    padding: 1px;
+    outline: none;
+    margin-left: 5px;
+    border-left: none;
+    border-right: none;
+    border-top:none;
+    margin-left: 30px;
+}
+
+input[type=number]{
+    max-width: 100px;
+    font-size: 15px;
+    padding: 1px;
+    outline: none;
+    margin-left: 5px;
+    border-left: none;
+    border-right: none;
+    border-top:none;
+   
+}
+
+
+input[type=number]:focus {
+    border-radius: 5px;
+    background: #ffffff;
+    box-shadow:  11px 11px 22px #d9d9d9,
+             -11px -11px 22px #ffffff;
+  }
+  
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  }
+
+#amount{
+    max-width: 100px;
+}
+
+.float{
+    width:40px;
+    height:40px;
+    background-color:#FF1D89;
+    color:#FFF;
+    border-radius:100%;
+    text-align:center;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.048),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.069),
+  0 12.5px 10px rgba(0, 0, 0, 0.085),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.101),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.122),
+  0 100px 80px rgba(0, 0, 0, 0.17);
+  }
+  
+  .float:hover {
+    background-color:#ff057e;
+  }
+  
+  .plus{
+    margin-top:10px;
+  }
+
+  #sum {
+    margin-right: 200px;
+    width: 100%;
+    text-align: center;
+   
+  }
+
+#printbutton{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+   
+    font-weight: 400;
+    color: white;
+    background-color: green;
+    border-radius: 20px;
+    
+}
+#resetbutton{
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  margin-top:10px;
+  margin-left: 0px;
+  font-weight: 400;
+  color: white;
+  background-color: red;
+  border-radius: 20px;
+  
+  
+}
+
+#buttons{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 300px;
+  margin-left: 30px;
+}
+
+
+
+
+@media print{
+     #printbutton{
+        display: none;
+    }
+    .float{
+      display: none;
+    }
+    .material-icons{
+      display: none;
+    }
+    #resetbutton{
+      display: none;
+  }  
+    #others{
+      display: none;
+    }
+    .products{
+      display: none;
+    }
+    .body{
+      padding: 30px 30px;
+      border: 2px dashed blue;
+      
+    }
+
+}
+  
+.products{
+  width: 700px;
+  height: 800px;
+  margin-left: 30px;
+  background: linear-gradient(green 25% ,yellow 75% ,green 100%);
+}
+.timber{
+  width: 300px;
+  height: 250px;
+  margin-left: 30px;
+  border: 1px solid black;
+  display: flex;
+
+}
+.timber #STD, #PINE {
+  width: 150px;
+  height: 250px;
+  border: 1px solid black;
+}
+
+#others{
+  width: 250px;
+  height: 320px;
+  margin-left: 30px;
+  border: 1px solid black;
+  position: absolute;
+  margin-left: 1000px ;
+  margin-top: 70px;
+
+}
+
+     </style>
+     <script>
+        const tBody = document.getElementById("table-body");
+
+        addNewRow =()=> {
+            const row = document.createElement("tr");
+            row.className = "single-row";
+            row.innerHTML = `<td><input type="text" placeholder="Product name" class="product" id="product"></td>
+                            <td><input type="number" placeholder="ft/pcs" name="unit" class="unit" id="unit" onkeyup="getInput()"></td>
+                            <td><input type="number" placeholder="0" name="amount" class="amount" id="amount" disabled></td>
+                            <td style="text-align: right; cursor="pointer" "><span class="material-icons" action="delete">delete_outline</span></td>`
+
+            tBody.insertBefore(row, tBody.lastElementChild.previousSibling);
+        }
+
+        document.getElementById("add-row").addEventListener("click", (e)=> {
+            e.preventDefault();
+            addNewRow();
+        });
+
+        //GET INPUTS, MULTIPLY AND GET THE ITEM PRICE
+        getInput =()=> {
+            var rows = document.querySelectorAll("tr.single-row");
+            rows.forEach((currentRow) => {
+                var unit = currentRow.querySelector("#unit").value;
+                var price = 1;
+
+                amount = unit * price;
+                currentRow.querySelector("#amount").value = amount;
+                overallSum();
+
+            })
+        };
+
+        //Get the overall sum/Total
+        overallSum =()=> {
+            var arr = document.getElementsByName("amount");
+            var total = 0;
+            for(var i = 0; i < arr.length; i++) {
+                if(arr[i].value) {
+                    total += +arr[i].value;
+                }
+                document.getElementById("total").value = total;
+            }
+        }
+
+        //Delete row from the table
+        tBody.addEventListener("click", (e)=>{
+            let el = e.target;
+            const deleteROW = e.target.getAttribute("action");
+            if(deleteROW == "delete") {
+                delRow(el);
+                overallSum();
+            }
+        })
+
+        //Target row and remove from DOM;
+        delRow =(el)=> {
+            el.parentNode.parentNode.parentNode.removeChild(el.parentNode.parentNode);
+        }
+
+
+
+     </script>
+</body>
+</html>
