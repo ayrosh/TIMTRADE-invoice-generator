@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stle.css">
+    <title>INVOICE GENERATOR</title>
+    <script>
+        function printContent(el){
+            var restorepage = document.body.innerHTML;
+            var printcontent = document.getElementById(el).innerHTML;
+            document.body.innerHTML = printcontent;
+            window.print();
+            document.body.innerHTML = restorepage;
+        }
+    </script>
+</head>
+<body id="div1">
+    <div class="body" >
+        <img style="margin-left: 200px; margin-top: 10px;" src="images/logo.jpg" alt="logo.png">
+        <h1 style= "margin-left: 170px"> TIMTRADE</h1>
+        <label id="l1" for="name">Name:</label>
+        <input type="text" id="name"><br><br>
+        <label style="margin-left: 0px;" for="order">Order No:</label>
+        <input type="text" id="order">
+
+         <table>
+            <thead>
+                <div style="margin-top: 50px; margin-left: 3px;" >
+                    <th style="padding-left: 12px;">PRODUCT</th>
+                    <th>FEET/QTY</th>
+                    <th>TOTAL</th>
+                   
+                </div>    
+            </thead>
+
+            <tbody id="table-body">
+             <tr class="single-row">
+                <td><input type="text" placeholder="Product name" class="product left"></td>
+                  <td><input type="number" placeholder="ft/pcs" name="unit" class="unit" id="unit" onkeyup="getInput()"></td>
+                  <td><input style="font-weight:bolder; font-size: 15px;" type="number" placeholder="0" name="amount" class="amount" id="amount" disabled></td>
+                  <td style="text-align: right;"><span class="material-icons" style="cursor: pointer;">delete_outline</span></td> 
+             </tr>
+
+             <tr style="padding-left: 20px">
+                <td class="dashed "><div class="float">
+                    <a href="#" class="float" id="add-row">
+                        <span class="material-icons plus">add</span>
+                    </a>
+                </div>
+            </td>
+                <td class="dashed"></td>
+                <td class="dashed"></td>
+                <td class="dashed"></td>
+                <td class="dashed"></td>
+            </tr>
+        </tbody>
+        </table>
+       
+            </tbody>
+         </table>
+    </div>
+    <div id="buttons">
+        <button type="button" id="printbutton" onclick="printContent('div1')">Print</button>
+        <button type="reset" id="resetbutton" onclick="window.location.reload()">Reset</button>
+    </div>
+    <div id="others">
+        <h2 style="color: white;">OTHERS:</h2>
+        <ul style="margin-left: 20px; color:white;">
+            <li>Quadrant @20/=</li>
+            <li>Covermoulding / Archtreave @25/=</li>
+            <li>cornice 3x1 @35/=</li>
+             <li>T.N.G / cornice 4x1 @45/=</li>
+             <li>Skirtings</li>
+             <li>Section houses</li>
+             <li>Props @300/=</li>
+             <li>Back & Seats</li>
+        </ul>
+        <h2 style="margin-top: 20px; color: white;"> TISSUES:</h2>
+        <ul style="margin-left: 20px; color: white;">
+            <li>40 Pack tissue papers</li>
+            <li>Jumbo Rolls</li>
+            <li>10 Pack tissue papers</li>
+        </ul>
+    </div>
+     <div class="products">
+        <h1 id="anime" style="color: white; margin-left: 45%; text-decoration: underline;">Products...</h1>
+        <h2 style="color: white;">Timber:</h2>
+        <div class="timber">
+            <div id="STD">
+                <h3 style="margin-left: 10px; text-decoration: underline;">STD-PINE</h3>
+                <ul style="margin-left: 20px; text-decoration: none; color: white; font-size: large; list-style-type: none; margin-top: 10px;">
+                    <li>(2x1) @15/=</li>
+                    <li>(2x2) @24/=</li>
+                    <li>(3x2) @35/=</li>
+                    <li>(4x2) @46/=</li>
+                    <li>(6x1) @35/=</li>
+                    <li>(6x2) @70/=</li>
+                    <li>(8x1) @50/=</li>
+                    <li>(8x2) @100/=</li>
+                    <li>(10x1) @70/=</li>
+                </ul>
+            </div>
+            <div id="PINE">
+                <h3 style="margin-left: 10px; text-decoration: underline;">STD-CYPRESS</h3>
+                <ul style="margin-left: 20px; text-decoration: none; color: white; font-size: large; list-style-type: none; margin-top: 10px;">
+                    <li>(2x1) @18/=</li>
+                    <li>(2x2) @35/=</li>
+                    <li>(3x2) @45/=</li>
+                    <li>(4x2) @65/=</li>
+                    <li>(6x1) @45/=</li>
+                    <li>(6x2) @100/=</li>
+                    <li>(8x1) @80/=</li>
+                    <li>(8x2) @160/=</li>
+                    <li>(10x1) @100/=</li>
+                </ul>
+            </div>
+        </div>
+        <h2 style="margin-top: 10px; color: white;">DOORS:</h2>
+        <div DOORS>
+             <ul style="margin-left: 20px; font-size: large;">
+                <li>Embossed 5A doors @ 3000/=</li>
+                <li>Melamine Door @3000/=</li>
+                <li>Ordinary Flash Door(DF01) @ 2000/=</li>
+                <li>Batten Doors @1800/=</li>
+                <li>T Doors @4300/=</li>
+                <li>Joint Door @1400/=</li>
+                <li>4x2 Door Frames @ 1300 per set(pine)</li>
+                <li>4x2 Door Frames @ 1300 per set(cypress)</li>
+             </ul>
+        </div>  
+     </div>
+    <script src="main.js"></script>
+</body>
+</html>
