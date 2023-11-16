@@ -18,8 +18,8 @@
 </head>
 <body id="div1">
     <div class="body" >
-        <img style="margin-left: 200px; margin-top: 10px;" src="logo.jpg" alt="logo.png">
-        <h1 style= "margin-left: 170px"> TIMTRADE</h1>
+        <img id="logo" style="margin-left: 200px; margin-top: 10px;" src="logo.jpg" alt="logo.png">
+        <h1 id="tite" style= "margin-left: 170px"> TIMTRADE</h1>
         <label id="l1" for="name">Name:</label>
         <input type="text" id="name"><br><br>
         <label style="margin-left: 0px;" for="order">Order No:</label>
@@ -326,6 +326,12 @@ input[type=number]:focus {
       padding: 30px 30px;
       border: 2px dashed blue;
       
+    }
+    #logo{
+        display:none;
+    } 
+    #tite {
+      display: none;
     }
 
 }
