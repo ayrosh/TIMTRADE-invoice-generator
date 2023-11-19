@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+ 
+  }
+  
+body {
+    font-family: roboto;
+    background: white;
+    margin-top: 10px;
+    display: flex;
+    margin-left: 20px;
+    overflow: hidden;
+    background-color: black;
+
+  }
+.invoice-header {
+    display: flex;
+    padding: 4px;
+    width: 40%;
+  }
+
+.body{
+    width: 450px;
+    height: 650px;
+    border: 2px solid black;
+    overflow: scroll;
+    margin-left: 20px;
+    padding: 10px;
+    background-color: white;
+    margin-right: 0px;
+}
+#name{
+    border-left: none;
+    border-right: none;
+    border-top:none;
+    border-bottom: dashed;
+    outline: none;
+    font-size: large;
+    font-weight: 600;
+    margin-left: 0px;
+    min-width: 200px ;
+    color: black;
+}
+
+#order{
+    border-left: none;
+    border-right: none;
+    border-top:none;
+    border-bottom: dashed;
+    outline: none;
+    width: 50px;
+    font-size: large;
+    font-weight: 600;
+    margin-left: 0px;
+    min-width: 100px;
+    color: black;
+    
+}
+
+input[type=text]{
+    max-width: 100px;
+    text-align: left;
+    font-size: 15px;
+    padding: 1px;
+    outline: none;
+    margin-left: 5px;
+    border-left: none;
+    border-right: none;
+    border-top:none;
+    margin-left: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: blue;
+}
+
+input[type=number]{
+    max-width: 50px;
+    font-size: 15px;
+    padding: 1px;
+    outline: none;
+    margin-left: 5px;
+    border-left: none;
+    border-right: none;
+    border-top:none;
+    color: blue;
+    font-weight: bold
+   
+}
+
+
+input[type=number]:focus {
+    border-radius: 5px;
+    width: 50px;
+    background: #ffffff;
+  }
+
+#amount{
+    max-width: 100px;
+}
+
+.float{
+    width:40px;
+    height:40px;
+    background-color:#FF1D89;
+    color:#FFF;
+    border-radius:100%;
+    text-align:center;
+    box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.048),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.069),
+  0 12.5px 10px rgba(0, 0, 0, 0.085),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.101),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.122),
+  0 100px 80px rgba(0, 0, 0, 0.17);
+  }
+  
+  .float:hover {
+    background-color:#ff057e;
+  }
+  
+  .plus{
+    margin-top:10px;
+  }
+
+  #sum {
+    margin-right: 200px;
+    width: 100%;
+    text-align: center;
+   
+  }
+
+#printbutton{
+    width: 100px;
+    height: 30px;
+    cursor: pointer;
+   
+    font-weight: 400;
+    color: white;
+    background-color: green;
+    border-radius: 20px;
+    
+}
+#resetbutton{
+  width: 100px;
+  height: 30px;
+  cursor: pointer;
+  margin-top:10px;
+  margin-left: 0px;
+  font-weight: 400;
+  color: white;
+  background-color: red;
+  border-radius: 20px;
+  
+  
+}
+
+#buttons{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: 300px;
+  margin-left: 30px;
+}
+
+
+
+
+@media print{
+     #printbutton{
+        display: none;
+    }
+    .float{
+      display: none;
+    }
+    .material-icons{
+      display: none;
+    }
+    #resetbutton{
+      display: none;
+  }  
+    #others{
+      display: none;
+    }
+    .products{
+      display: none;
+    }
+    .body{
+      padding: 10px 10px;
+      
+      
+    }
+    .single-row{
+      display: visible;
+    }
+    #image1{
+      display: none;
+    }
+    #logname{
+      display: none;
+    }
+
+}
+  
+.products{
+  width: 700px;
+  height: 800px;
+  margin-left: 30px;
+  background: linear-gradient(green 25% ,yellow 75% ,green 100%);
+}
+.timber{
+  width: 300px;
+  height: 270px;
+  margin-left: 30px;
+  border: 1px solid black;
+  display: flex;
+
+}
+.timber #STD, #PINE {
+  width: 150px;
+  height: 270px;
+  border: 1px solid black;
+}
+
+#others{
+  width: 250px;
+  height: 320px;
+  margin-left: 30px;
+  border: 1px solid black;
+  position: absolute;
+  margin-left: 1000px ;
+  margin-top: 70px;
+
+}
+
+ul li button{
+    font-weight: bolder;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+ul li button:hover{
+  background-color: rgba(0, 0, 0, 0.322);
+  color: white;
+
+  
+
+}
+#price{
+    width: 50px;
+}

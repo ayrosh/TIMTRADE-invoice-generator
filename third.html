@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="third.css">
+</head>
+    <body id="div1">
+        <div class="body" >
+            <img id="image1" style="margin-left: 200px; margin-top: 10px;" src="logo.jpg" alt="logo.png">
+            <h1 id="logname" style= "margin-left: 170px"> TIMTRADE</h1>
+            <label id="l1" for="name">Name:</label>
+            <input type="text" id="name"><br><br>
+            <label style="margin-left: 0px;" for="order">Order No:</label>
+            <input type="text" id="order">
+    
+             <table>
+                <thead>
+                    <div style="margin-top: 50px; margin-left: 3px;" >
+                        <th style="padding-left: 12px;">PRODUCT</th>
+                        <th>FEET/QTY</th>
+                        <th>PRICE</th>
+                        <th>TOTAL</th>
+                       
+                    </div>    
+                </thead>
+    
+                <tbody id="table-body">
+                 
+    
+                 <tr style="padding-left: 20px">
+                    <td class="dashed "><div class="float">
+                        <a href="#" class="float" id="add-row">
+                            <span class="material-icons plus">Add</span>
+                        </a>
+                    </div>
+                </td>
+                    <td class="dashed"></td>
+                    <td class="dashed"></td>
+                    <td class="dashed"></td>
+                    <td class="dashed"></td>
+                </tr>
+            </tbody>
+            </table>
+           
+                </tbody>
+             </table>
+             <div id="sum">
+              <label for="total">Total:</label>
+              <input type="text" placeholder="0.00" name="total" class="total" id="total" disabled></div>
+        </div>
+        <div id="buttons">
+            <button type="button" id="printbutton" /*onclick="printContent('div1')*/" onclick="window.print()">Print</button>
+            <button type="reset" id="resetbutton" onclick="window.location.reload()">Reset</button>
+        </div>
+        <div id="others">
+            <h2 style="color: white;">OTHERS:</h2>
+            <ul style="margin-left: 20px; color:white;">
+                <li><button style="cursor: pointer;" id="button19" value="Quadrant">Quadrant @20/=</button></li>
+                <li><button style="cursor: pointer;" id="button20" value="Archtreave">covermoulding/Archtreave @25/=</button></li>
+                <li><button style="cursor: pointer;" id="button21" value="Cornice 3x1">Cornice 3x1 @35/=</button></li>
+                <li><button style="cursor: pointer;" id="button22" value="Archtreave">T.N.G/Cornice 4x1 @45/=</button></li>
+                <li><button style="cursor: pointer;" id="button23" value="Props">Props @300/=</button></li>
+                <li>Skirtings</li>
+                 <li>Section houses</li>
+                 <li>Back & Seats</li>
+            </ul>
+            <h2 style="margin-top: 20px; color: white;"> TISSUES:</h2>
+            <ul style="margin-left: 20px; color: white;">
+                <li><button style="cursor: pointer;" id="button24" value="jumbo rolls">Jumbo rolls</button></li>
+                <li><button style="cursor: pointer;" id="button25" value="10pack tissue">10pack tissue papers</button></li>
+                <li><button style="cursor: pointer;" id="button26" value="40pack">40pack tissue papers</button></li>
+            </ul>
+        </div>
+         <div class="products">
+            <h1 id="anime" style="color: white; margin-left: 45%; text-decoration: underline;">Products...</h1>
+            <h2 style="color: white;">Timber:</h2>
+            <div class="timber">
+                <div id="STD">
+                    <h3 style="margin-left: 10px; text-decoration: underline;">STD-PINE</h3>
+                    <ul style="margin-left: 20px; text-decoration: none; color: white; font-size: large; list-style-type: none; margin-top: 10px;">
+                        <li><button style="cursor: pointer;" id="button1" value="std-Pine(2x1)">Pine(2x1) @15/=</button></li>
+                        <li><button style="cursor: pointer;" id="button2" value="std-Pine(2x2)">Pine(2x2) @24/=</button></li>
+                        <li><button style="cursor: pointer;" id="button3" value="std-Pine(3x2)">Pine(3x2) @35/=</button></li>
+                        <li><button style="cursor: pointer;" id="button4" value="std-Pine(4x2)">Pine(4x2) @46/=</button></li>
+                        <li><button style="cursor: pointer;" id="button5" value="std-Pine(6x1)">Pine(6x1) @35/=</button></li>
+                        <li><button style="cursor: pointer;" id="button6" value="std-Pine(6x2)">Pine(6x2) @70/=</button></li>
+                        <li><button style="cursor: pointer;" id="button7" value="std-Pine(8x1)">Pine(8x1) @50/=</button></li>
+                        <li><button style="cursor: pointer;" id="button8" value="std-Pine(8x2)">Pine(8x2) @100/=</button></li>
+                        <li><button style="cursor: pointer; " id="button9" value="std-Pine(10x1)">Pine(10x1) @70/=</button></li>
+                    </ul>
+                </div>
+                <div id="PINE">
+                    <h3 style="margin-left: 10px; text-decoration: underline;">STD-CYPRESS</h3>
+                    <ul style="margin-left: 20px; text-decoration: none; color: white; font-size: large; list-style-type: none; margin-top: 10px;">
+                        <li><button style="cursor: pointer;" id="button10" value="std-cyp(2x1)">cyp(2x1) @18/=</button></li>
+                        <li><button style="cursor: pointer;" id="button11" value="std-cyp(2x2)">cyp(2x2) @35/=</button></li>
+                        <li><button style="cursor: pointer;" id="button12" value="std-cyp(3x2)">cyp(3x2) @45/=</button></li>
+                        <li><button style="cursor: pointer;" id="button13" value="std-cyp(4x2)">cyp(4x2) @65/=</button></li>
+                        <li><button style="cursor: pointer;" id="button14" value="std-cyp(6x1)">cyp(6x1) @45/=</button></li>
+                        <li><button style="cursor: pointer;" id="button15" value="std-cyp(6x2)">cyp(6x2) @100/=</button></li>
+                        <li><button style="cursor: pointer;" id="button16" value="std-cyp(8x1)">cyp(8x1) @80/=</button></li>
+                        <li><button style="cursor: pointer;" id="button17" value="std-cyp(8x2)">cyp(8x2) @160/=</button></li>
+                        <li><button style="cursor: pointer;" id="button18" value="std-cyp(10x1)">cyp(10x1) @100/=</button></li>
+                    </ul>
+                </div>
+            </div>
+            <h2 style="margin-top: 30px; color: white;">DOORS:</h2>
+            <div DOORS>
+                 <ul style="margin-left: 20px; font-size: large;">
+                    <li><button style="cursor: pointer;" id="button27" value="Embossed 5A">Embossed 5A Door @3000/=</button></li>
+                    <li><button style="cursor: pointer;" id="button28" value="Melamine Door">Melamine Door @3000/=</button></li>
+                    <li><button style="cursor: pointer;" id="button29" value="Flash Door">Ordinary Flash Door(DF01) @2000/=</button></li>
+                    <li><button style="cursor: pointer;" id="button30" value="Batten Door">Batten door @1800/=</button></li>
+                    <li><button style="cursor: pointer;" id="button31" value="T-Door">T-Door @4300/=</button></li>
+                    <li><button style="cursor: pointer;" id="button32" value="Joint-Door">Joint-Door @1400/=</button></li>
+                    <li><button style="cursor: pointer;" id="button33" value=" pine-4x2 Door frames">4x2 door frames(pine) @1300/=</button></li>
+                    <li><button style="cursor: pointer;" id="button34" value=" cup-4x2 Door frames">4x2 door frames(cypress) @1300/=</button></li>
+                 </ul>
+            </div>  
+         </div>
+    <script src="third.js"></script>
+
+</body>
+</html>
